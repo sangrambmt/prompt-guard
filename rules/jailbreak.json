@@ -1,0 +1,10 @@
+[
+  {"id": "jailbreak.dan", "pattern": "\\bDAN\\b.{0,60}(do\\s+anything|now|mode)|do\\s+anything\\s+now", "risk": "high", "score": 0.92, "description": "DAN jailbreak"},
+  {"id": "jailbreak.developer_mode", "pattern": "(developer|dev)\\s+mode|enable\\s+(developer|dev)\\s+mode", "risk": "high", "score": 0.9, "description": "Developer mode jailbreak"},
+  {"id": "jailbreak.jailbreak_keyword", "pattern": "jailbr(eak|oken)(ed|ing)?\\s+(you|the|this|claude|gpt|ai|model|assistant)", "risk": "critical", "score": 0.98, "description": "Explicit jailbreak"},
+  {"id": "jailbreak.fictional_framing", "pattern": "(in\\s+this\\s+(story|fiction|roleplay|scenario)|pretend\\s+(you\\s+are|to\\s+be)|imagine\\s+you\\s+(are|have\\s+no|can)).{0,80}(no\\s+(rules?|restrictions?|limits?|guidelines?)|unrestricted)", "risk": "high", "score": 0.87, "description": "Fictional framing bypass"},
+  {"id": "jailbreak.evil_twin", "pattern": "(evil|opposite|dark|unethical|unrestricted|uncensored)\\s+(version|mode|twin|persona)\\s+(of\\s+)?(you|yourself|the\\s+(ai|assistant))", "risk": "high", "score": 0.91, "description": "Evil twin persona"},
+  {"id": "jailbreak.encoding_trick", "pattern": "(answer\\s+in\\s+(base64|rot13|hex|encoded)|encode\\s+your\\s+(response|answer|reply))", "risk": "high", "score": 0.85, "description": "Encoding trick"},
+  {"id": "jailbreak.opposite_day", "pattern": "opposite\\s+day|everything\\s+you\\s+say\\s+(is|means)\\s+the\\s+opposite", "risk": "high", "score": 0.82, "description": "Opposite day trick"},
+  {"id": "jailbreak.many_shot", "pattern": "(user:\\s*.{0,60}\\nassistant:\\s*.{0,60}\\n){3,}", "risk": "high", "score": 0.85, "multiline": true, "description": "Many-shot attack"}
+]

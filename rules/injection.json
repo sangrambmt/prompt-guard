@@ -1,0 +1,9 @@
+[
+  {"id": "injection.ignore_previous", "pattern": "ignore\\s+(all\\s+)?(previous|prior|above|earlier)\\s+(instructions?|prompts?|context|rules?)", "risk": "high", "score": 0.9, "description": "Instruction override attempt"},
+  {"id": "injection.disregard", "pattern": "disregard\\s+(all\\s+|your\\s+|the\\s+)?(previous|prior|above|earlier|your)?\\s*(instructions?|prompts?|rules?|training|guidelines?)", "risk": "high", "score": 0.9, "description": "Disregard variant"},
+  {"id": "injection.system_prompt_reveal", "pattern": "(repeat|print|show|reveal|output|tell me|display)\\s+(your\\s+)?(system\\s+prompt|initial\\s+prompt|original\\s+instructions?|base\\s+prompt)", "risk": "high", "score": 0.95, "description": "System prompt extraction"},
+  {"id": "injection.role_hijack", "pattern": "(you\\s+are\\s+no\\s+longer|forget\\s+(that\\s+)?you\\s+are|stop\\s+being|you\\s+are\\s+not\\s+an?\\s+(ai|assistant|bot))", "risk": "high", "score": 0.88, "description": "Role hijack"},
+  {"id": "injection.token_smuggling", "pattern": "(<\\|im_start\\|>|<\\|im_end\\|>|\\[INST\\]|<<SYS>>|\\[/INST\\])", "risk": "critical", "score": 0.99, "description": "Control token smuggling"},
+  {"id": "injection.override_safety", "pattern": "(override|bypass|disable|turn\\s+off|circumvent)\\s+(your\\s+|the\\s+)?(safety|content\\s+filter|moderation|restrictions?|filters?)", "risk": "critical", "score": 0.97, "description": "Safety bypass attempt"},
+  {"id": "injection.do_anything", "pattern": "(do\\s+anything|no\\s+(restrictions?|limits?|rules?|filters?)|without\\s+(restrictions?|limits?|filters?))", "risk": "medium", "score": 0.7, "description": "Remove constraints"}
+]
