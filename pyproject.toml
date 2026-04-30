@@ -5,6 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "prompt-guard"
 version = "0.1.0"
+description = "Security layer for LLM apps — detect injection, jailbreaks, and PII"
 requires-python = ">=3.10"
 dependencies = []
 
